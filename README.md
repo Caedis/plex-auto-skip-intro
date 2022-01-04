@@ -1,0 +1,1 @@
+A simple docker mod to automatically skip intros
