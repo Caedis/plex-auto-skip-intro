@@ -5,4 +5,4 @@ web_client_path="$(find /usr/lib/plexmediaserver/ -name WebClient.bundle)/Conten
 file_to_edit=$(du -a "$web_client_path" | sort -hr | sed -n '2{p;q}' | awk '{print $2}')
 
 echo "Adding Auto Skip Intro"
-sed -i 's/onTouchStart:mP/onTouchStart:mP,onFocus:y/g' "$file_to_edit"
+sed -i 's/autoFocus:"autofocus",/autoFocus:"autofocus",onFocus:y,/g' "$file_to_edit"
